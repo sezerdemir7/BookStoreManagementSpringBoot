@@ -56,15 +56,13 @@ public class BookService {
             String sayfaSayisiString = row.getCell(2).getStringCellValue();
 
 
-            // Kitap nesnenize verileri set edin
+
             Book kitap = new Book();
             kitap.setName(kitapAdi);
             kitap.setAuthor(yazarAdi);
             kitap.setPrice(String.valueOf(sayfaSayisiString));
 
-            // Nesnenizi burada kullanabilirsiniz (örn. veritabanına kaydedebilirsiniz)
 
-            // Örnek olarak:
             bookRepository.save(kitap);
         }
 
